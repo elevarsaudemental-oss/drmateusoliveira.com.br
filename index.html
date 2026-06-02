@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dr. Mateus Oliveira — Médico | Atendimento em saúde mental, dependências e cuidado LGBTQIAPN+</title>
+<meta name="description" content="Atendimento médico online em saúde mental com o Dr. Mateus Oliveira (CRM/MS 12409), residente em Psiquiatria pela UFMS. Foco em dependências, ansiedade, depressão e saúde mental da população LGBTQIAPN+." />
+<meta property="og:title" content="Dr. Mateus Oliveira — Médico" />
+<meta property="og:description" content="Atendimento em saúde mental, com escuta e sem julgamento. 100% online." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#1a1a1a;
+    --bg-2:#222222;
+    --bg-3:#2a2a2a;
+    --text:#fff4e5;
+    --muted:#b8b1a3;
+    --accent:#cdd28b;
+    --accent-soft:rgba(205,210,139,.15);
+    --cream:#fff4e5;
+    --border:#33332e;
+    --radius:14px;
+    --max:1120px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,-apple-system,sans-serif;
+    background:var(--bg);color:var(--text);line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .container{max-width:var(--max);margin:0 auto;padding:0 24px}
+  .display{font-family:'Anton',sans-serif;font-weight:400;letter-spacing:.5px;line-height:1.05;text-transform:uppercase}
+  .accent{color:var(--accent)}
+
+  /* HEADER */
+  header{position:sticky;top:0;z-index:50;background:rgba(26,26,26,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--cream)}
+  .brand-dot{width:10px;height:10px;background:var(--accent);border-radius:50%}
+  .nav-links{display:flex;gap:28px;font-size:14px;color:var(--muted)}
+  .nav-links a:hover{color:var(--accent)}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#1a1a1a;font-weight:700;padding:12px 22px;border-radius:999px;border:none;cursor:pointer;transition:transform .15s ease, background .2s ease;font-size:15px}
+  .btn:hover{background:#dde097;transform:translateY(-1px)}
+  .btn-ghost{background:transparent;color:var(--cream);border:1px solid var(--border)}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+  @media (max-width:760px){.nav-links{display:none}}
+
+  /* HERO */
+  .hero{padding:90px 0 70px;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(800px 400px at 80% 20%, rgba(205,210,139,.07), transparent 60%);pointer-events:none}
+  .hero-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:center;position:relative}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:20px}
+  .eyebrow::before{content:"";width:24px;height:1px;background:var(--accent)}
+  h1.display{font-size:clamp(44px,6vw,82px)}
+  .hero p.lead{margin-top:24px;font-size:18px;color:var(--muted);max-width:560px}
+  .hero-ctas{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap}
+  .credentials{margin-top:32px;display:flex;gap:24px;color:var(--muted);font-size:14px;flex-wrap:wrap}
+  .credentials span{display:flex;align-items:center;gap:8px}
+  .credentials span::before{content:"●";color:var(--accent);font-size:8px}
+  .hero-visual{position:relative;aspect-ratio:4/5;background:linear-gradient(135deg,#2a2a2a,#1a1a1a);border-radius:var(--radius);border:1px solid var(--border);overflow:hidden}
+  .hero-visual img{width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block}
+  .hero-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(to top, rgba(26,26,26,.4), transparent 40%);pointer-events:none}
+  @media (max-width:860px){.hero-grid{grid-template-columns:1fr}.hero-visual{max-width:360px;margin:0 auto}}
+
+  /* SECTIONS */
+  section{padding:90px 0}
+  .section-head{max-width:720px;margin-bottom:56px}
+  .section-head h2{font-size:clamp(32px,4vw,52px);margin-bottom:16px}
+  .section-head p{color:var(--muted);font-size:17px}
+
+  /* ÁREAS */
+  .areas{background:var(--bg-2)}
+  .areas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .area-card{background:var(--bg-3);border:1px solid var(--border);border-radius:var(--radius);padding:32px;transition:border-color .2s, transform .2s}
+  .area-card:hover{border-color:var(--accent);transform:translateY(-4px)}
+  .area-icon{width:48px;height:48px;border-radius:12px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;margin-bottom:20px;color:var(--accent);font-size:22px;font-weight:700;font-family:'Anton',sans-serif}
+  .area-card h3{font-size:22px;margin-bottom:12px}
+  .area-card p{color:var(--muted);font-size:15px;margin-bottom:16px}
+  .area-card ul{list-style:none;font-size:14px;color:var(--muted)}
+  .area-card li{padding:6px 0;display:flex;align-items:flex-start;gap:8px}
+  .area-card li::before{content:"→";color:var(--accent);font-weight:700;flex-shrink:0}
+  @media (max-width:860px){.areas-grid{grid-template-columns:1fr}}
+
+  /* SOBRE */
+  .sobre-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:center}
+  .sobre-photo{aspect-ratio:1;border-radius:var(--radius);background:linear-gradient(135deg,#2a2a2a,#1a1a1a);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:'Anton',sans-serif;font-size:120px;color:var(--accent)}
+  .sobre-photo span{opacity:.22}
+  .sobre h2{font-size:clamp(32px,4vw,48px);margin-bottom:24px}
+  .sobre p{color:var(--muted);margin-bottom:18px;font-size:16px}
+  .sobre .quote{border-left:3px solid var(--accent);padding-left:20px;margin:28px 0;font-style:italic;color:var(--cream);font-size:18px}
+  @media (max-width:860px){.sobre-grid{grid-template-columns:1fr}}
+
+  /* CONTEÚDOS */
+  .conteudos{background:var(--bg-2)}
+  .articles-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-bottom:60px}
+  .article-card{background:var(--bg-3);border:1px solid var(--border);border-radius:var(--radius);padding:32px;transition:border-color .2s}
+  .article-card:hover{border-color:var(--accent)}
+  .article-tag{display:inline-block;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:14px;padding:4px 10px;background:var(--accent-soft);border-radius:999px}
+  .article-card h3{font-size:24px;margin-bottom:14px;line-height:1.25}
+  .article-preview{color:var(--muted);font-size:15px;margin-bottom:18px}
+  .article-card details summary{color:var(--accent);font-weight:600;cursor:pointer;font-size:14px;list-style:none;display:inline-flex;align-items:center;gap:6px}
+  .article-card details summary::after{content:"↓";transition:transform .2s;display:inline-block}
+  .article-card details[open] summary::after{transform:rotate(180deg)}
+  .article-card details summary:hover{text-decoration:underline}
+  .article-body{margin-top:20px;color:var(--muted);font-size:15px}
+  .article-body p{margin-bottom:14px}
+  .article-body strong{color:var(--cream)}
+  @media (max-width:760px){.articles-grid{grid-template-columns:1fr}}
+
+  /* INSTAGRAM GRID */
+  .ig-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:28px;gap:20px;flex-wrap:wrap}
+  .ig-head h3{font-size:28px}
+  .ig-head a{color:var(--accent);font-weight:600;font-size:14px}
+  .ig-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .ig-post{aspect-ratio:1;background:var(--bg-3);border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Anton',sans-serif;font-size:14px;color:var(--accent);opacity:.6;text-align:center;padding:12px;transition:opacity .2s, transform .2s;cursor:pointer;text-transform:uppercase;line-height:1.1}
+  .ig-post:hover{opacity:1;transform:scale(1.02)}
+  @media (max-width:760px){.ig-grid{grid-template-columns:repeat(2,1fr)}}
+
+  /* COMO FUNCIONA */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  .step-num{font-family:'Anton',sans-serif;font-size:72px;color:var(--accent);line-height:1;margin-bottom:12px}
+  .step h4{font-size:18px;margin-bottom:8px}
+  .step p{color:var(--muted);font-size:14px}
+  @media (max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+  @media (max-width:480px){.steps{grid-template-columns:1fr}}
+
+  /* FAQ */
+  .faq{background:var(--bg-2)}
+  .faq-list{max-width:820px;margin:0 auto}
+  details.faq-item{border-bottom:1px solid var(--border);padding:24px 0;cursor:pointer}
+  details.faq-item summary{font-weight:600;font-size:17px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;color:var(--cream)}
+  details.faq-item summary::after{content:"+";color:var(--accent);font-size:24px;transition:transform .2s;font-weight:400}
+  details.faq-item[open] summary::after{transform:rotate(45deg)}
+  details.faq-item p{color:var(--muted);margin-top:14px;font-size:15px}
+
+  /* CTA FINAL */
+  .cta-final{background:linear-gradient(135deg,#2a2a2a,#1a1a1a);border:1px solid var(--border);border-radius:var(--radius);padding:60px 40px;text-align:center;margin:0 auto;max-width:900px}
+  .cta-final h2{font-size:clamp(32px,4vw,48px);margin-bottom:20px}
+  .cta-final p{color:var(--muted);margin-bottom:32px;font-size:17px;max-width:560px;margin-left:auto;margin-right:auto}
+
+  /* FOOTER */
+  footer{background:var(--bg-2);padding:50px 0 30px;border-top:1px solid var(--border);font-size:14px;color:var(--muted)}
+  .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:32px}
+  .footer-grid h5{color:var(--cream);font-size:14px;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px}
+  .footer-grid a{display:block;padding:4px 0}
+  .footer-grid a:hover{color:var(--accent)}
+  .footer-bottom{border-top:1px solid var(--border);padding-top:24px;text-align:center;font-size:13px}
+  .footer-bottom strong{color:var(--cream)}
+  @media (max-width:760px){.footer-grid{grid-template-columns:1fr}}
+
+  /* FLOAT WHATSAPP */
+  .whatsapp-float{position:fixed;bottom:24px;right:24px;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,.5);z-index:100;transition:transform .2s}
+  .whatsapp-float:hover{transform:scale(1.1)}
+  .whatsapp-float svg{width:32px;height:32px;fill:white}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="brand"><span class="brand-dot"></span> Dr. Mateus Oliveira</div>
+    <nav class="nav-links">
+      <a href="#areas">O que atendo</a>
+      <a href="#sobre">Sobre mim</a>
+      <a href="#onde">Onde atendo</a>
+      <a href="#conteudos">Conteúdos</a>
+      <a href="#faq">Dúvidas</a>
+    </nav>
+    <a href="#contato" class="btn">Quero marcar</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Médico · Saúde mental · Online e presencial em Campo Grande/MS</div>
+      <h1 class="display">Um lugar pra<br/>cuidar da sua<br/>cabeça <span class="accent">sem medo</span><br/>de ser julgado.</h1>
+      <p class="lead">Oi, eu sou o Dr. Mateus. Atendo gente que tá precisando de ajuda com ansiedade, depressão, uso de substâncias, ou que quer um psiquiatra que entende a vivência LGBT+ — sem moralismo e sem aquele papo distante de consultório.</p>
+      <div class="hero-ctas">
+        <a href="#contato" class="btn">Marcar consulta</a>
+        <a href="#sobre" class="btn btn-ghost">Quem sou eu</a>
+      </div>
+      <div class="credentials">
+        <span>CRM/MS 12409</span>
+        <span>Residente em Psiquiatria (UFMS)</span>
+        <span>Online · Presencial em Campo Grande/MS</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="dr-mateus.jpg" alt="Dr. Mateus Oliveira, médico, sorrindo de jaleco branco e estetoscópio" />
+    </div>
+  </div>
+</section>
+
+<!-- ÁREAS -->
+<section id="areas" class="areas">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">O que eu atendo</div>
+      <h2 class="display">Três frentes<br/>que eu levo <span class="accent">a sério</span>.</h2>
+      <p>Atendo saúde mental de um jeito geral — ansiedade, depressão, sono, humor, tudo isso. Mas tem três assuntos que escolhi me aprofundar porque ainda têm muito estigma e fazem gente boa adiar o cuidado.</p>
+    </div>
+    <div class="areas-grid">
+      <div class="area-card">
+        <div class="area-icon">01</div>
+        <h3>Dependências</h3>
+        <p>Álcool, maconha, ChemSex, jogo, bet — sem sermão, sem te tratar como "viciado". A gente entende o que tá rolando e constrói um caminho que faz sentido pra sua vida.</p>
+        <ul>
+          <li>Álcool e tabaco</li>
+          <li>Maconha e outras substâncias</li>
+          <li>ChemSex</li>
+          <li>Jogos de aposta (bets)</li>
+        </ul>
+      </div>
+      <div class="area-card">
+        <div class="area-icon">02</div>
+        <h3>Saúde mental no geral</h3>
+        <p>Pra quem tá num momento difícil, ou já se arrasta há tempos sem entender o que tá acontecendo. Consulta com tempo de verdade pra ouvir sua história.</p>
+        <ul>
+          <li>Ansiedade</li>
+          <li>Depressão e transtornos de humor</li>
+          <li>Esquizofrenia e outros quadros graves</li>
+          <li>Sono e estresse</li>
+        </ul>
+      </div>
+      <div class="area-card">
+        <div class="area-icon">03</div>
+        <h3>Saúde mental LGBT+</h3>
+        <p>Atendimento afirmativo, sem precisar explicar o básico sobre sua identidade ou relacionamento. Acompanhamento pra quem tá em transição ou só precisa de um psiquiatra que entende.</p>
+        <ul>
+          <li>Estresse de minoria</li>
+          <li>Acompanhamento em transição</li>
+          <li>Sexualidade e saúde mental</li>
+          <li>Vergonha, vínculo, pertencimento</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" class="sobre">
+  <div class="container" style="max-width:780px">
+    <div>
+      <div class="eyebrow">Quem sou eu</div>
+      <h2 class="display">Para além dos<br/><span class="accent">diplomas</span>.</h2>
+      <p>Eu sei que, muitas vezes, a medicina é vista apenas através de diplomas e currículos. Eles são fundamentais, claro, e cada etapa da minha formação está sendo trilhada com um objetivo: entender o ser humano em sua totalidade.</p>
+      <p>Mas, para além dos títulos, o que me move é a escuta. E eu acredito que o cuidado começa pelo acolhimento e pela liberdade de ser quem você é.</p>
+      <div class="quote">Se você busca um espaço seguro para cuidar da sua saúde mental, sem máscaras e com respeito absoluto à sua história: muito prazer, eu sou o Mateus Oliveira.</div>
+      <p style="color:var(--cream);font-weight:600">Seja bem-vind@. Vamos conversar?</p>
+      <p style="font-size:14px;margin-top:8px">Dr. Mateus Oliveira<br/>CRM/MS 12409</p>
+      <a href="#contato" class="btn" style="margin-top:24px">Bora conversar</a>
+    </div>
+  </div>
+</section>
+
+<!-- ONDE ATENDO -->
+<section id="onde" class="areas">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Onde eu atendo</div>
+      <h2 class="display">Online ou <span class="accent">presencial</span><br/>em Campo Grande.</h2>
+      <p>Você escolhe o formato que funciona melhor pra você. As duas modalidades têm o mesmo cuidado — só muda o canal.</p>
+    </div>
+    <div class="areas-grid" style="grid-template-columns:repeat(2,1fr)">
+      <div class="area-card">
+        <div class="area-icon">★</div>
+        <h3>Online (todo o Brasil)</h3>
+        <p>Consulta por videochamada. Atende qualquer lugar do país, desde que você tenha um cantinho com privacidade e internet decente.</p>
+        <p style="color:var(--cream);font-weight:600;margin-top:20px;margin-bottom:8px">Agendamento</p>
+        <p style="font-size:14px">WhatsApp: <a href="https://wa.me/5567991891381" target="_blank" rel="noopener" class="accent" style="font-weight:600">(67) 99189-1381</a></p>
+      </div>
+      <div class="area-card">
+        <div class="area-icon">⌂</div>
+        <h3>Presencial — Clínica Rotili</h3>
+        <p>Em Campo Grande/MS, integrando a equipe da Clínica Rotili. Para quem prefere o atendimento cara a cara.</p>
+        <p style="color:var(--cream);font-weight:600;margin-top:20px;margin-bottom:8px">Agendamento</p>
+        <p style="font-size:14px">WhatsApp: <a href="https://wa.me/5567991008270" target="_blank" rel="noopener" class="accent" style="font-weight:600">(67) 99100-8270</a></p>
+        <p style="font-size:14px;margin-top:6px">Rua José Pereira, 447 — Bela Vista, Campo Grande/MS</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTEÚDOS -->
+<section id="conteudos" class="conteudos">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Conteúdos</div>
+      <h2 class="display">Coisas que eu <span class="accent">escrevi</span><br/>pra te ajudar a entender.</h2>
+      <p>Textos curtos sobre os temas que mais aparecem no consultório. Não substitui consulta — mas pode te ajudar a entender o que tá acontecendo.</p>
+    </div>
+
+    <div class="articles-grid">
+
+      <article class="article-card">
+        <span class="article-tag">Dependências</span>
+        <h3>"Mas a verdinha também vicia?"</h3>
+        <p class="article-preview">A maconha tem fama de inofensiva. Tem gente que fuma todo dia há anos e jura que "só relaxa". Mas a ciência mostra outra coisa — e não é alarmismo moral, é dado.</p>
+        <details>
+          <summary>Ler completo</summary>
+          <div class="article-body">
+            <p>Sim, a maconha pode causar dependência. Não é igual álcool ou crack, mas existe um quadro clínico chamado <strong>Transtorno por Uso de Cannabis</strong> reconhecido em todos os manuais de psiquiatria.</p>
+            <p>Os sinais que a gente vê no consultório: você tenta diminuir e não consegue. Fuma sozinho. Começa a precisar de mais pra sentir o mesmo efeito. Larga compromissos. Fica irritado, ansioso ou com insônia quando passa um tempo sem.</p>
+            <p>Mais sério ainda: em pessoas predispostas, o uso frequente — principalmente começando cedo, na adolescência — aumenta risco de quadros psicóticos, ansiedade crônica e depressão. Não acontece com todo mundo, mas acontece.</p>
+            <p>O ponto não é "maconha é o demônio". É: <strong>se você sente que perdeu o controle, isso merece conversa</strong>. Sem julgamento, sem te chamar de viciado. Só olhando o que tá rolando.</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="article-card">
+        <span class="article-tag">LGBT+</span>
+        <h3>Por que eu atendo a população LGBT+ enquanto médico</h3>
+        <p class="article-preview">Não é nicho de marketing. É que muita gente LGBT+ chega no consultório depois de anos adiando porque já foi mal atendida — ou tem medo de ser.</p>
+        <details>
+          <summary>Ler completo</summary>
+          <div class="article-body">
+            <p>Tem um conceito em saúde mental chamado <strong>estresse de minoria</strong>. Resumindo: pessoas LGBT+ vivem cronicamente expostas a microagressões, rejeição familiar, violência, e o efeito disso na cabeça é cumulativo.</p>
+            <p>Os números mostram: maior risco de depressão, ansiedade, ideação suicida, uso de substâncias. Não porque ser LGBT+ é "doença" — mas porque o ambiente é hostil, e o corpo paga o preço.</p>
+            <p>Quando você procura ajuda e o médico fica perguntando coisa básica sobre sua identidade, ou trata sua relação como "fase", ou pior, sugere que seu sofrimento sumiria se você "fosse hetero" — você sai pior do que entrou.</p>
+            <p>Por isso eu estudo, atendo, e me posiciono. <strong>Você não precisa explicar o básico aqui. A gente já começa do meio.</strong></p>
+          </div>
+        </details>
+      </article>
+
+      <article class="article-card">
+        <span class="article-tag">Bets</span>
+        <h3>Quando aposta vira problema</h3>
+        <p class="article-preview">A bet entrou na vida da galera como entretenimento. Mas pra muita gente já virou um buraco — e o pior é que ninguém percebe porque é tudo dentro do celular.</p>
+        <details>
+          <summary>Ler completo</summary>
+          <div class="article-body">
+            <p>Jogo patológico é diagnóstico psiquiátrico de verdade. Funciona no cérebro de um jeito muito parecido com substâncias: dispara dopamina, cria tolerância, exige cada vez mais pra sentir o mesmo "rush".</p>
+            <p>Sinais que algo passou do ponto: você aposta valores que não devia. Mente sobre quanto perdeu. Tenta recuperar prejuízo apostando mais (o famoso "ir buscar"). Sente alívio só quando tá apostando. Discute em casa por causa disso.</p>
+            <p>Tem uma camada a mais nas bets atuais: design feito pra te prender, notificação o tempo todo, "bônus" que te puxa de volta. Não é fraqueza moral — é uma engrenagem desenhada pra você ficar.</p>
+            <p><strong>Se você reconheceu alguma coisa aqui, vale conversar.</strong> Quanto antes, mais fácil sair.</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="article-card">
+        <span class="article-tag">Saúde mental</span>
+        <h3>"Vergonha" não é só sentimento — é sintoma</h3>
+        <p class="article-preview">Vergonha crônica trava sua vida em silêncio. E quase ninguém leva pro psiquiatra porque acha que é "jeito" — mas tem muita coisa por trás.</p>
+        <details>
+          <summary>Ler completo</summary>
+          <div class="article-body">
+            <p>Vergonha é diferente de culpa. Culpa é "fiz algo errado". Vergonha é "eu sou errado". E essa segunda forma, quando vira crônica, está por trás de quadros de ansiedade social, depressão, transtornos alimentares, dependências e relacionamentos abusivos.</p>
+            <p>Tem origem comum: você aprendeu, em algum momento, que algo seu (corpo, sexualidade, jeito, origem, sentimentos) não era aceitável. Aí começou a esconder. E o esconder vira o jeito padrão de funcionar.</p>
+            <p>No consultório, a gente trabalha isso de várias formas — medicação quando precisa, mas principalmente entendendo de onde veio essa vergonha e como ela tá moldando suas escolhas hoje.</p>
+            <p><strong>Você não nasceu pra viver se escondendo.</strong></p>
+          </div>
+        </details>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section id="funciona">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Como funciona</div>
+      <h2 class="display">Do "oi" no zap<br/>até a <span class="accent">consulta</span>.</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h4>Manda mensagem</h4>
+        <p>Você chama no WhatsApp. Minha secretária te passa valores, horários disponíveis e tira dúvidas.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h4>A gente agenda</h4>
+        <p>Escolhemos o melhor dia e hora. Você recebe o link da videochamada e o que precisa fazer antes.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h4>Primeira consulta</h4>
+        <p>Mais longa, pra eu te ouvir direito e entender sua história. A gente sai dela com um plano.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <h4>Continuidade</h4>
+        <p>Retornos no ritmo certo pro seu caso. Entre as consultas, canal aberto pra dúvidas administrativas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="faq">
+  <div class="container">
+    <div class="section-head" style="text-align:center;margin-left:auto;margin-right:auto">
+      <div class="eyebrow">Dúvidas comuns</div>
+      <h2 class="display">As perguntas que<br/>todo mundo <span class="accent">faz</span>.</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>É presencial ou online?</summary>
+        <p>Os dois. <strong>Online</strong> por videochamada, pra qualquer lugar do Brasil. <strong>Presencial</strong> em Campo Grande/MS, na Clínica Rotili (Rua José Pereira, 447 — Bela Vista). Cada modalidade tem um WhatsApp diferente pra agendamento (veja na seção "Onde eu atendo").</p>
+      </details>
+      <details class="faq-item">
+        <summary>Atende convênio?</summary>
+        <p>Por enquanto só particular. Mas depois da consulta você recebe o recibo médico, que dá pra usar pra reembolso (se seu plano cobre) e pra declarar no imposto de renda.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Quanto custa?</summary>
+        <p>O valor a gente passa no WhatsApp pra você ter a tabela atualizada e tirar dúvida sobre primeira consulta e retorno.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Preciso de encaminhamento?</summary>
+        <p>Não. Você marca direto. Se já tem laudos, receitas ou exames de antes, leva pra primeira consulta — ajuda bastante.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Atende criança ou adolescente?</summary>
+        <p>Por enquanto só maiores de 18. Se for pra menor de idade, posso indicar colegas que atendem.</p>
+      </details>
+      <details class="faq-item">
+        <summary>E se eu (ou alguém próximo) estiver em crise agora?</summary>
+        <p>Se for risco imediato — vontade de se machucar, intoxicação grave, crise psiquiátrica forte — vai direto pro pronto-socorro, liga pro SAMU (192) ou pro CVV (188, 24h, gratuito). Consulta agendada não substitui emergência.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Posso só tirar uma dúvida antes de marcar?</summary>
+        <p>Pode. Manda no WhatsApp que a gente te orienta — sem compromisso de marcar.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section id="contato">
+  <div class="container">
+    <div class="cta-final">
+      <div class="eyebrow" style="justify-content:center">Bora começar</div>
+      <h2 class="display">Marca sua <span class="accent">primeira consulta</span>.</h2>
+      <p>Escolhe o formato que faz sentido pra você. Sem pressão, sem compromisso — só informação clara pra decidir no seu tempo.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center">
+        <a href="https://wa.me/5567991891381?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20queria%20marcar%20uma%20consulta%20online%20com%20o%20Dr.%20Mateus." class="btn" target="_blank" rel="noopener">
+          Consulta online →
+        </a>
+        <a href="https://wa.me/5567991008270?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20queria%20marcar%20uma%20consulta%20presencial%20com%20o%20Dr.%20Mateus%20na%20Cl%C3%ADnica%20Rotili." class="btn btn-ghost" target="_blank" rel="noopener">
+          Presencial — Clínica Rotili →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="brand" style="margin-bottom:12px"><span class="brand-dot"></span> Dr. Mateus Oliveira</div>
+        <p>Médico · CRM/MS 12409<br/>Atendimento em saúde mental<br/>Residente em Psiquiatria — UFMS</p>
+      </div>
+      <div>
+        <h5>Navegar</h5>
+        <a href="#areas">O que atendo</a>
+        <a href="#sobre">Sobre mim</a>
+        <a href="#conteudos">Conteúdos</a>
+        <a href="#funciona">Como funciona</a>
+        <a href="#faq">Dúvidas</a>
+      </div>
+      <div>
+        <h5>Contato</h5>
+        <a href="https://wa.me/5567991891381" target="_blank" rel="noopener">Online — (67) 99189-1381</a>
+        <a href="https://wa.me/5567991008270" target="_blank" rel="noopener">Presencial — (67) 99100-8270</a>
+        <a href="https://instagram.com/drmateusoliveira_" target="_blank" rel="noopener">@drmateusoliveira_</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p><strong>Aviso:</strong> Esse site tem caráter informativo e segue a Resolução CFM nº 1.974/2011 e o Código de Ética Médica. Nada aqui substitui consulta, diagnóstico ou tratamento médico. Em emergência: pronto-socorro, SAMU (192) ou CVV (188).</p>
+      <p style="margin-top:12px">© <span id="year"></span> Dr. Mateus Oliveira. Todos os direitos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/5567991891381" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.057 2.063c-5.514 0-9.991 4.477-9.991 9.991 0 1.762.461 3.484 1.337 5.001L2 22l5.07-1.33a9.954 9.954 0 0 0 4.987 1.27h.004c5.514 0 9.991-4.478 9.991-9.991s-4.477-9.991-9.991-9.991z"/></svg>
+</a>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
